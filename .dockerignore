@@ -1,0 +1,15 @@
+**/.vs
+**/.vscode
+**/.idea
+**/*.user
+**/*.suo
+**/*.cache
+**/bin
+**/obj
+**/node_modules
+**/.git
+**/.gitignore
+**/README.md
+**/docker-compose.yml
+**/.dockerignore
+

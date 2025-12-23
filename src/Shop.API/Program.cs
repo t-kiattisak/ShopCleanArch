@@ -1,6 +1,8 @@
 using MediatR;
+using Microsoft.EntityFrameworkCore;
 using Shop.API.Extensions;
 using Shop.Application.Interfaces;
+using Shop.Infrastructure.Data;
 using Shop.Infrastructure.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,6 +10,10 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddProblemDetails();
+
+// Register DbContext
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 builder.Services.AddMediatR(cfg =>
 {

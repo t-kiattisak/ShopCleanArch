@@ -18,9 +18,7 @@ public class GetProductsQueryHandler(IProductRepository productRepository) : IRe
             Name = p.Name,
             Description = p.Description,
             Price = p.Price,
-            Stock = p.Stock,
-            CreatedAt = p.CreatedAt,
-            UpdatedAt = p.UpdatedAt
+            StockQuantity = p.StockQuantity
         });
     }
 }

@@ -23,9 +23,7 @@ public class GetProductByIdQueryHandler(IProductRepository productRepository) : 
             Name = product.Name,
             Description = product.Description,
             Price = product.Price,
-            Stock = product.Stock,
-            CreatedAt = product.CreatedAt,
-            UpdatedAt = product.UpdatedAt
+            StockQuantity = product.StockQuantity
         };
     }
 }
